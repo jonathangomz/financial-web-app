@@ -1,25 +1,15 @@
 <template>
   <div class="Logo">
-    <div class="center">
-      <Outer class="outer"/>
-      <Inner class="inner"/>
-      <Diagonal class="diagonal"/>
+    <div class="center relative">
+      <Outer class="outer absolute inset-x-0 mx-auto" />
+      <Inner class="inner absolute inset-x-0 mx-auto" />
+      <Diagonal class="diagonal absolute inset-x-0 mx-auto" />
     </div>
   </div>
 </template>
 <style>
 .center {
-  display: inline;
-  position: absolute;
-  z-index: -1;
-  top: 100px;
-  left: 50%;
   animation: appear 1s;
-}
-
-.center > svg {
-  position: relative;
-  left: -50%;
 }
 
 .center .outer {
@@ -27,14 +17,12 @@
 }
 
 .center .inner {
-  bottom: 164px;
   animation: rotate 1s;
 }
 
 .center .diagonal {
-  bottom: 360px;
-  left: -30%;
   animation: rotate 1s;
+  top: -30px;
 }
 
 @keyframes rotate {
